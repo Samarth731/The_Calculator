@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+}
+
+.animated-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #f1dac4, #a69cac , #474973, #161b33, #0d0c1d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add wavy grid lines to the background */
+.animated-background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.05) 25%, transparent 50%, rgba(255, 255, 255, 0.05) 75%, transparent 100%),
+    linear-gradient(transparent 0%, rgba(255, 255, 255, 0.05) 25%, transparent 50%, rgba(255, 255, 255, 0.05) 75%, transparent 100%);
+  background-size: 100% 30px;
+  background-repeat: repeat-y;
+  animation: waveAnimation 5s infinite;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -30px;
+  }
+}
+
+/* Add darker concentric circles and diagonal lines to the background */
+.animated-background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.05) 5%, transparent 20%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%) 0 0,
+    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%) 0 100%;
+  background-size: 50px 50px, 50px 50px, 50px 50px;
+  background-repeat: repeat, repeat, repeat;
+  z-index: -1; /* Place behind the bubbles */
+}
+
+/* Normal bubbles */
+.bubble {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: bubbleAnimation 10s infinite;
+  transition: transform 0.3s ease-out;
+  /*box-shadow: 0 2px 4px rgb(75, 64, 64); /* Add minor shadow */
+  z-index: -1;
+}
+
+
+
+
+@keyframes bubbleAnimation {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+  50% {
+    transform: translateY(0) translateX(0);
+  }
+  75% {
+    transform: translateY(-10px) translateX(5px);
+  }
+}
+
+.wrapper
+{
+    margin-left: 38%;
+    width: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 30px;
+    background-color: #333333; /* Initial box color */
+    color: wheat;
+    font-family: 'Dosis', sans-serif;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper header
+{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+}
+
+header::after
+{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 320px;
+  height: 3px;
+  width: 0%;
+  background-color: wheat;
+  z-index: 1;
+  transition: all ease 1s;
+}
+
+header:hover::after
+{
+  width: 100%;
+}
+
+.wrapper form
+{
+    margin: 40px 0 20px 0;
+}
+
+form :where(input, select)
+{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #474973;
+    color: wheat;
+}
+
+button
+{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #474973;
+    height: 50px;
+    color: wheat;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
+
+form input
+{
+    height: 25px;
+    color: wheat;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#input_1::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+form::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+form p
+{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input:focus
+{
+    border: 2px solid wheat;
+}
+
+form .drop-list
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+.drop-list .select-box
+{
+  display: flex;
+  height: 45px;
+  width: 115px;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-box select
+{
+    width: 100px;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    height: 40px;
+    font-size: medium;
+}
+
+.drop-list .icon
+{
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form .exchange-rate
+{
+    font-size: medium;
+}
+
+form button
+{
+    height: 52px;
+}
+
+.select-box select::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track
+{
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb
+{
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #fff;
+}
+
+#p2::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+#p1::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+#select_1::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+#select_2::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+#p0::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+.exchange-rate::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+#button_1::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}
+
+br::selection
+{
+  color: #161b33;
+  background-color: #888;
+  font-weight: 500;
+}

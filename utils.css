@@ -1,0 +1,52 @@
+.text-center
+{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 70px;
+    letter-spacing: 2px;
+    margin-top: 100%;
+    position: absolute;
+    margin-left: 6%;
+    border-width: 16px;
+    border-color: rgb(0, 255, 255);
+    border-style: double;
+    border-radius: 30px;
+    transform-style: smooth;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.2), 10px 10px 30px rgba(0, 0, 0, 0.6);
+    transition: all ease 1s;
+}
+
+
+
+.mx-auto
+{
+    margin: auto;
+}
+.flex
+{
+    display: flex;
+}
+
+.flex-col
+{
+    flex-direction: column;
+}
+
+.items-center
+{
+    align-items: center;
+}
+
+@keyframes changeBorderColor {
+    0% {
+      stroke: #FBC02E;
+    }
+    50% {
+      stroke: #19D8FF;
+    }
+    100% {
+      stroke: #FBC02E;
+    }
+  }
+
+

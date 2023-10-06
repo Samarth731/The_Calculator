@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script1.js"></script>
+  <link rel="stylesheet" href="Currency.css">
+  <title>Animated Background with Bubbles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="animated-background" id="background" style="z-index: 1; width: 100%;">
+      <div class="wrapper" style="z-index: 2; position: relative;">
+        <header>Currency Converter</header>
+        <form action="#">
+            <div class="amount">
+                <p id="p0">Enter amount</p>
+                <input type="text" value="1" id="input_1">
+            </div>
+            <br>
+            <div class="drop-list">
+                <div class="from">
+                    <p id="p1">From:</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                    <select id="select_1">
+                    </select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p id="p2">to:</p>
+                    <div class="select-box">
+                    <select id="select_2">
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="exchange-rate"> </div>
+        <br>
+        <button id="button_1">Get exchange-rate</button>
+      </div>
+  </div>
+  <script src="Currency.js"></script>
+  <script src="country-list.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="utils.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="Headers" style="z-index: 1;">
+  <h1 class="text-center">Calculator</h1>
+<!-- Code for dropdown--><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="select-menu">
+  <div class="select-btn">
+      <span class="sBtn-text">Select your option</span>
+      <i class="bx bx-chevron-down"></i>
+  </div>
+  <ul class="options">
+      <li class="option" onclick="Scientific()">
+          <span class="option-text">Scientific</span>
+      </li>
+      <hr><br>
+      <li class="option" onclick="Currency()">
+          <span class="option-text">Currency</span>
+      </li>
+      <hr><br>
+      <li class="option" onclick="Standard()" selcted>
+          <span class="option-text">Standard</span>
+      </li>
+  </ul>
+</div>
+</div>
+
+<!-- End of Code for dropdown-->
+
+  <div class="TheGod">
+  <div class="container flex flex-col items-center mx-auto m-w-20">
+
+    <div class="row row-input" id="inputBox">
+        <input type="text" class="input" id="InputBox">
+    </div>
+
+    <div class="row">
+        <button class="button" id="Destruction">C</button>
+        <button class="button" style="font-style: italic;">x²</button>
+        <button class="button" style="font-style: italic;">√x</button>
+        <button class="button">π</button>
+    </div>
+    <div class="row">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button">*</button>
+    </div>
+    <div class="row">
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button">-</button>
+    </div>
+    <div class="row">
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button">+</button>
+    </div>
+    <div class="row">
+        <button class="button">0</button>
+        <button class="button">.</button>
+        <button class="button" onclick="calculate">=</button>
+        <button class="button">/</button>
+    </div>
+    <div class="row">
+      <button class="button">sin</button>
+      <button class="button">cos</button>
+      <button class="button">tan</button>
+      <button class="button" onclick="backspc()" id="ce-button">log</button>
+  </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+  <main class="main">
+    <section class="section section_wave">
+      <svg width="100%" height="100%" viewBox="0 0 1500 1000" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <!-- Wave paths with random positions, delays, and colors -->
+          <!-- You can use JavaScript to generate these randomly -->
+          <path class="dash dash_0" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+          
+          <path class="dash dash_1" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_2" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_3" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_4" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_5" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_6" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_7" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_8" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        
+          <path class="dash dash_9" d="M16,16 C76.235,16 77.932,77 138.167,77 C198.402,77 198.402,16 260.333,16 C320.568,16 322.265,77 382.5,77 C442.735,77 442.735,16 504.667,16 C564.902,16 566.598,77 626.833,77 C687.068,77 687.068,16 749,16 C809.235,16 810.932,77 871.167,77 C931.402,77 931.402,16 993.333,16 C1053.568,16 1055.265,77 1115.5,77 C1175.735,77 1175.735,16 1237.667,16 C1297.902,16 1299.598,77 1359.833,77 C1420.068,77 1420.068,16 1482,16" id="wave" stroke-width="32"></path>
+        </g>
+      </svg>
+    </section>
+  </main>
+</body>
+</html>
+
+
+
+
+
+<!--
+This script places a badge on your repl's full-browser view back to your repl's cover
+page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+teal, blue, blurple, magenta, pink!
+-->
+<!--<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script> -->
